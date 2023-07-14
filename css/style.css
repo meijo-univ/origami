@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* font-family: 'Noto Serif JP', serif; */
-
 *,
 ::before,
 ::after {
@@ -13,9 +11,19 @@
   font-family: 'Noto Serif JP', serif;
 }
 
+.main{
+  padding-top: 70px;
+}
+
 .main h2{
+  margin: 0 auto;
+  width: 20%;
   text-align: center;
-} 
+}
+
+.main h2 .line{
+  border-bottom: double 5px rgb(100, 116, 85);
+}
 
 .main div p{
   overflow-wrap: break-word;
@@ -35,7 +43,11 @@ body{
 }
 
 .header{
+  width: 100%;
+  position: fixed;
   background-color: rgb(177, 189, 166);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
   /* margin: 0;
   padding: 0; */
 }
@@ -81,7 +93,6 @@ li{
   list-style: none;
   margin-left: 2px;
   margin-right: 2px;
-  
 }
 
 .header-img{
@@ -106,7 +117,6 @@ li{
       top: 0;
       left: 0;
       right: 0;
-      background-color: #ffffff;
       height: 50px;
       z-index: 10;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -128,7 +138,7 @@ li{
       top: 100%;
       left: 0;
       right: 0;
-      color: #ffffff;
+      /* color: #ffffff; */
       background-color: #736e62;
       padding-top: 30px;
       padding-bottom: 50px;

@@ -21,7 +21,7 @@
       }
       @media (max-width: 1000px) {
 
-        /*  */
+        /* 右上の目次をハンバーガーメニューにする */
         .site-menu ul {
           display: block;
         }
@@ -30,7 +30,6 @@
           top: 0;
           left: 0;
           right: 0;
-          background-color: #ffffff;
           height: 50px;
           z-index: 10;
           /*ヘッダーに影をつける*/
@@ -42,7 +41,7 @@
           left: 0;
           right: 0;
           color: #ffffff;
-          background-color: #736e62;
+          background-color: rgb(100, 116, 85);
           padding-top: 30px;
           padding-bottom: 50px;
           display: none;
@@ -106,6 +105,14 @@
     </script>
     
     <!-- ページトップへ -->
+    <style>
+      .pagetop{
+        display: none;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+      }
+    </style>
     <script>
       $(document).ready(function() {
         var pagetop = $('.pagetop');
@@ -130,6 +137,7 @@
           position: relative;
         }
         .toolTip span{
+          text-indent: 0;
           color: #333;
           position: absolute;
           display: block;
@@ -171,10 +179,9 @@
           border-color: transparent transparent #BCB transparent;
           z-index: -1;
         }
-        .toolTip:hover{ cursor: help; }
+        /* .toolTip:hover{ cursor: help; } */
         .toolTip:hover span{
           visibility: visible;
-          cursor: help;
           z-index: 20; 
         }
       </style>
@@ -188,12 +195,6 @@
           <span></span>
           <span></span>
           <span></span>
-          <!-- <ul class="menu" style="display: none;margin-top: 30px;">
-            <li><a href="creation.html">創作</a></li>
-            <li><a href="make.html">作る</a></li>
-            <li><a href="organization.html">組織</a></li>
-            <li><a href="history.html">歴史</a></li>
-          </ul> -->
         </div>
         <div class="header-site-menu">
           <nav class="site-menu">
@@ -209,11 +210,11 @@
     </header>
 
     <!-- <a href="#" class="top-button" style="position: fixed;bottom: 0px;right: 0px;">↑トップへ戻る</a> -->
-    <p class="pagetop" style="display: none;position: fixed;bottom: 0px;right: 0px;"><a href="#"><img class="header-img" src="images/紙飛行機(ピンク).png" alt="" style="width: 100px;"></a></p>
+    <p class="pagetop"><a href="#"><img class="header-img" src="images/紙飛行機(ピンク).png" alt="ページトップへ戻る" style="width: 100px;"></a></p>
 
       <main class="main">
       <div>
-        <h2 class="main-title"><p class="toolTip">折り紙<span>折り紙とはあーだーこーだー</span></p>とは</h2>
+        <h2 class="main-title"><p class="toolTip">折り紙<span><a href="https://ja.wikipedia.org/wiki/%E6%8A%98%E3%82%8A%E7%B4%99">折り紙</a>とはあーだーこーだー</span></p>とは</h2>
         <p>内容</p>
         <h2 class="history">折り紙の歴史</h2>
         <p>内容</p>
