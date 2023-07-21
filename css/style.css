@@ -19,6 +19,7 @@
   margin: 0 auto;
   width: 20%;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .main h2 .line{
@@ -30,7 +31,7 @@
   text-indent: 1em;
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 a {
@@ -88,6 +89,20 @@ ul{
   justify-content: flex-end;
 }
 
+ul.list-vertical {
+  display: block; /* 縦並びリストの親要素をブロック要素として表示 */
+}
+
+ul.list-vertical li {
+  display: block; /* リスト項目をブロック要素として表示 */
+  margin-bottom: 5px; /* 各リスト項目の間にスペースを追加 */
+}
+
+ul.list-vertical li h3 {
+  margin-left: 240px; /* タイトルを左に20pxの空白を追加 */
+  text-align: left; /* タイトルを左揃えに設定 */
+}
+
 li{
   /* display: inline; */
   list-style: none;
@@ -102,78 +117,97 @@ li{
   padding-left: 5px;
 }
 
+.menu-button{
+  display: none;
+}
+
 @media (max-width: 1000px) {
+  /* 右上の目次をハンバーガーメニューにする */
   .site-menu ul {
     display: block;
-    text-align: center;
+  }
+  .header {/*メニューを上部に固定*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10;
+    /*ヘッダーに影をつける*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  .site-menu {
+    position: absolute;
+    top: 100%;
+    color: #ffffff;
+    background-color: rgb(100, 116, 85);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 0px;
+    display: none;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .site-menu li {
-      margin-top: 20px;
+  .site-menu ul{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
   }
+  /* ここまで */
 
-  .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      z-index: 10;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  .menu-button{
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0;
+    left: 0;
+    position: relative;
   }
+  .menu-button span{
+    display: block;
+    margin: 0;
+    border: none;
+    width: 50%;
+    height: 3px;
+    background: #000;
+    transform-origin:0% 50%;
+    position: absolute;
+    top: 12px;
+    left: 25%;
+    transition: .3s;
+  }
+  .menu-button span:nth-of-type(2){
+    top: 21px;
+  }
+  .menu-button span:nth-of-type(3){
+    top: 30px;
+  }
+  .close-button span{
+    left: 30%;        
+  } 
+  .close-button span:nth-of-type(1){
+    transform: rotate(45deg);
+    width: 52%;
+  }
+  .close-button span:nth-of-type(2){
+    opacity: 0;
+  }
+  .close-button span:nth-of-type(3){
+    top: 30px;
+    transform: rotate(-45deg);
+    width: 52%;
+  }
+}
 
-  .header-inner {
-      padding-left: 20px;
-      padding-right: 20px;
-      height: 100%;
-      position: relative;
-  }
-
-  .header-logo {
-      width: 100px;
-  }
-
-  .header-site-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      /* color: #ffffff; */
-      background-color: #736e62;
-      padding-top: 30px;
-      padding-bottom: 50px;
-      display: none;
-  }
-
-  .header-site-menu.is-show {
-      display: block;
-  }
-
-  .main {
-      padding-top: 50px;;
-  }
-
-  .footer-logo {
-      margin-top: 60px;
-  }
-
-  .copyright {
-      margin-top: 50px;
-  }
-
-  .toggle-menu-button {
-      display: block;
-      width: 44px;
-      height: 34px;
-      background-image: url(../images/common/icon-menu.png);
-      background-size: 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: transparent;
-      border: none;
-      border-radius: 0;
-      outline: none;
-  }
+.pagetop{
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
 .footer {
