@@ -239,8 +239,13 @@ li{
 .pagetop{
   display: none;
   position: fixed;
-  bottom: 0px;
-  right: 0px;
+  bottom: 3%;
+  right: 3%;
+}
+.pagetop-img{
+  display: block;
+  width: 15vw;
+  height: auto;
 }
 
 .footer {
