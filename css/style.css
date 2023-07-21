@@ -17,7 +17,7 @@
 
 .main h2{
   margin: 0 auto;
-  width: 20%;
+  width: 80%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -111,10 +111,7 @@ ul.list-vertical li h3 {
   ul.list-vertical li p {
     font-size: 20px; /* 1000px以下の画面サイズの場合、説明文の大きさを小さくする（例：14px） */
   }
-}
-
-h2{
-  font-size: 8vw;
+  
 }
 
 li{
