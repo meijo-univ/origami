@@ -2,8 +2,7 @@
 $(function(){
     $(".menu-button").click(function() {
         $(this).toggleClass("close-button");
-        $(".menu").toggle();
-        $(".site-menu").toggle();
+        $(".header .site-menu").toggle();
     });
 });
 

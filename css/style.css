@@ -67,7 +67,7 @@ header h1 a{
   margin-top: 0;
   margin-left: 30px;
   display: block;
-  width: 250px;
+  width: auto;
 }
 
 .site-menu{
@@ -99,8 +99,18 @@ ul.list-vertical li {
 }
 
 ul.list-vertical li h3 {
-  margin-left: 240px; /* タイトルを左に20pxの空白を追加 */
-  text-align: left; /* タイトルを左揃えに設定 */
+  margin-left: 15%; /* タイトルを左に20pxの空白を追加 */
+  text-align: left; /* タイトルを左揃えに設定 */ 
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  ul.list-vertical li h3 {
+    font-size: 15px; /* 1000px以下の画面サイズの場合、タイトルの大きさを小さくする　*/
+  }
+  ul.list-vertical li p {
+    font-size: 20px; /* 1000px以下の画面サイズの場合、説明文の大きさを小さくする（例：14px） */
+  }
 }
 
 li{
@@ -123,7 +133,7 @@ li{
 
 @media (max-width: 1000px) {
   /* 右上の目次をハンバーガーメニューにする */
-  .site-menu ul {
+  .header .site-menu ul {
     display: block;
   }
   .header {/*メニューを上部に固定*/
@@ -131,12 +141,12 @@ li{
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 120px;
     z-index: 10;
     /*ヘッダーに影をつける*/
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
-  .site-menu {
+  .header .site-menu {
     position: absolute;
     top: 100%;
     color: #ffffff;
@@ -150,18 +160,40 @@ li{
     transform: translateX(-50%);
   }
 
-  .site-menu ul{
+  .main{
+    padding-top: 140px;
+  }
+
+  .header .site-menu ul{
     width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
   }
   /* ここまで */
+  h1{
+    width: 500px;
+    font-size: 9vw;
+  }
+  .header-img{
+    display: block;
+    width: 10vw;
+    height: auto;
+    padding-left: 5px;
+  }
+  .site-menu a{
+    font-size: 4vw;
+    text-align: center;
+  }
+  .site-menu li{
+    display: flex;
+    justify-content: space-around;
+  }
 
   .menu-button{
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 15vw;
+    height: 15vw;
     cursor: pointer;
     margin: 0;
     left: 0;
@@ -172,19 +204,19 @@ li{
     margin: 0;
     border: none;
     width: 50%;
-    height: 3px;
+    height: 6%;
     background: #000;
     transform-origin:0% 50%;
     position: absolute;
-    top: 12px;
+    top: 23%;
     left: 25%;
     transition: .3s;
   }
   .menu-button span:nth-of-type(2){
-    top: 21px;
+    top: 41%;
   }
   .menu-button span:nth-of-type(3){
-    top: 30px;
+    top: 60%;
   }
   .close-button span{
     left: 30%;        
@@ -197,10 +229,55 @@ li{
     opacity: 0;
   }
   .close-button span:nth-of-type(3){
-    top: 30px;
+    top: 60%;
     transform: rotate(-45deg);
     width: 52%;
   }
+  /*
+  .menu-button{
+    display: block;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    margin: 0;
+    left: 0;
+    position: relative;
+  }
+  .menu-button span{
+    display: block;
+    margin: 0;
+    border: none;
+    width: 50%;
+    height: 7px;
+    background: #000;
+    transform-origin:0% 50%;
+    position: absolute;
+    top: 28px;
+    left: 25%;
+    transition: .3s;
+  }
+  .menu-button span:nth-of-type(2){
+    top: 50px;
+  }
+  .menu-button span:nth-of-type(3){
+    top: 72px;
+  }
+  .close-button span{
+    left: 30%;        
+  } 
+  .close-button span:nth-of-type(1){
+    transform: rotate(45deg);
+    width: 52%;
+  }
+  .close-button span:nth-of-type(2){
+    opacity: 0;
+  }
+  .close-button span:nth-of-type(3){
+    top: 72px;
+    transform: rotate(-45deg);
+    width: 52%;
+  }
+  */
 }
 
 .pagetop{
