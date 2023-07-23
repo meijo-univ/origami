@@ -119,13 +119,13 @@ ul.list-vertical li h3 {
 
 @media screen and (max-width: 1000px) {
   ul.list-vertical li h3 {
-    font-size: 15px; /* 1000px以下の画面サイズの場合、タイトルの大きさを小さくする*/
+    font-size: 25px; /* 1000px以下の画面サイズの場合、タイトルの大きさを小さくする*/
   }
   ul.list-vertical li p {
     font-size: 20px; /* 1000px以下の画面サイズの場合、説明文の大きさを小さくする*/
   }
   .main div p{
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
